@@ -18,7 +18,6 @@ body {
     justify-content: flex-start; /* Align items from the top */
     padding: 20px 15px; /* Reduced padding */
     text-align: center;
-    gap: 0; /* Remove extra gap between elements */
 }
 
 /* Orange checkmark circle */
@@ -86,7 +85,6 @@ p {
     display: flex;
     justify-content: flex-start; /* Align items to the left */
     align-items: center; /* Vertically center align text and price */
-    gap: 10px; /* Space between item and cost */
     margin: 10px 0; /* Restore spacing between order details */
     padding: 10px 0;
     border-top: 1px solid #ddd;
@@ -95,6 +93,11 @@ p {
 
 .order-details span {
     font-size: 1rem; /* Ensure consistent font size */
+}
+
+.order-details span b {
+    color: #6a5acd; /* Blue-purple color for the quantity (1x, 2x) */
+    margin-right: 5px; /* Add a little spacing after the quantity */
 }
 
 /* Sticky footer with new order button */
