@@ -7,6 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    overflow-y: auto; /* Allow the page to scroll */
 }
 
 .container {
@@ -15,17 +16,16 @@ body {
     flex: 1;
     align-items: center;
     justify-content: flex-start; /* Align items from the top */
-    padding: 20px 15px; /* Reduced top padding */
+    padding: 20px 15px; /* Reduced padding */
     text-align: center;
     gap: 0; /* Remove extra gap between elements */
 }
 
-/* Add space above the checkmark */
+/* Orange checkmark circle */
 .checkmark-container {
     width: 200px; /* Larger circle */
     height: 200px; /* Larger circle */
-    margin-top: auto; /* Push it closer to the order details */
-    margin-bottom: 10px; /* Reduced space */
+    margin-bottom: 10px; /* Reduced space between checkmark and text */
     border: 8px solid #ffa500; /* Thicker border */
     border-radius: 50%;
     display: flex;
@@ -42,7 +42,7 @@ body {
 .short {
     position: absolute;
     width: 30px; /* Proportionally adjusted */
-    height: 9px; /* Thicker for visibility */
+    height: 8px; /* Thicker for visibility */
     background-color: #ffa500;
     transform: rotate(45deg);
     top: 50px;
@@ -78,18 +78,23 @@ p {
 
 /* Order list */
 .order-list {
-    margin-top: 110px; /* Keep the details static */
     width: 100%;
-    max-height: calc(100vh - 300px); /* Adjusted for space */
-    overflow-y: auto; /* Allows scrolling if items overflow */
-    text-align: left;
     padding: 0 20px;
 }
 
 .order-details {
-    margin: -10px 0; /* Restore space between order details */
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically center align text and price */
+    gap: 10px; /* Space between item and cost */
+    margin: 10px 0; /* Restore spacing between order details */
     padding: 10px 0;
     border-top: 1px solid #ddd;
+    text-align: left;
+}
+
+.order-details span {
+    font-size: 1rem; /* Ensure consistent font size */
 }
 
 /* Sticky footer with new order button */
