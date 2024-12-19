@@ -1,0 +1,118 @@
+/* General reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start; /* Align items from the top */
+    padding: 20px 15px; /* Reduced top padding */
+    text-align: center;
+    gap: 0; /* Remove extra gap between elements */
+}
+
+/* Add space above the checkmark */
+.checkmark-container {
+    width: 200px; /* Larger circle */
+    height: 200px; /* Larger circle */
+    margin-top: auto; /* Push it closer to the order details */
+    margin-bottom: 10px; /* Reduced space */
+    border: 8px solid #ffa500; /* Thicker border */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkmark {
+    position: relative;
+    width: 100px; /* Larger checkmark */
+    height: 100px;
+}
+
+.short {
+    position: absolute;
+    width: 30px; /* Proportionally adjusted */
+    height: 9px; /* Thicker for visibility */
+    background-color: #ffa500;
+    transform: rotate(45deg);
+    top: 50px;
+    left: 20px;
+}
+
+.long {
+    position: absolute;
+    width: 70px; /* Proportionally adjusted */
+    height: 8px;
+    background-color: #ffa500;
+    transform: rotate(-45deg);
+    top: 42px;
+    left: 35px;
+}
+
+/* Order details */
+h2 {
+    font-size: 1.8rem;
+    margin: 0; /* Removed extra margin */
+}
+
+p {
+    margin: 2px 0; /* Reduced spacing between paragraphs */
+    font-size: 1rem;
+}
+
+.order-number {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 5px 0; /* Reduced spacing */
+}
+
+/* Order list */
+.order-list {
+    margin-top: 110px; /* Keep the details static */
+    width: 100%;
+    max-height: calc(100vh - 300px); /* Adjusted for space */
+    overflow-y: auto; /* Allows scrolling if items overflow */
+    text-align: left;
+    padding: 0 20px;
+}
+
+.order-details {
+    margin: -10px 0; /* Restore space between order details */
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Sticky footer with new order button */
+footer {
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+}
+
+.new-order-btn {
+    background-color: #ffa500;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.new-order-btn:hover {
+    background-color: #e59400;
+}
